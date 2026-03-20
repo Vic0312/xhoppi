@@ -8,7 +8,7 @@ body{
 
 footer{
     width: 100%;
-    height: 40vh;
+    height: 50vh;
     background-color: rgb(245, 245, 245);
     display: flex;
     flex-wrap: wrap;
@@ -16,10 +16,14 @@ footer{
     gap: 50px;
     align-items: center;
     padding-top: 4vh;
-    
+    margin-top: 60%;
 }
 
+<<<<<<< HEAD
 .p-rdp{
+=======
+#p{
+>>>>>>> dfb87eaeb663b678419aa93ab321ae2422fb305a
     font-size: 15px;
     line-height: 0.5;
     color: rgb(120, 120, 120);
@@ -31,8 +35,13 @@ h1{
     color: rgb(0, 0, 0);
 }
 
+<<<<<<< HEAD
 #hr-rdp {
   width: 86.3vw;          /* Obriga a linha a ocupar a largura toda */
+=======
+hr {
+  width: 90.3vw;          /* Obriga a linha a ocupar a largura toda */
+>>>>>>> dfb87eaeb663b678419aa93ab321ae2422fb305a
   border: 0;
   border-top: 1px solid rgb(150, 150, 150);
   margin-bottom: -80px;
