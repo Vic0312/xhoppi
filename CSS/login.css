@@ -76,7 +76,7 @@ section .container{
 .container input{
     width: 280px; 
     height: 40px;
-    padding: 10px;
+    padding: 7px;
     margin-bottom: 30px;
 
     border: 1px solid #ccc;
@@ -112,4 +112,8 @@ section .container{
 
 .container .links #sms{
     text-decoration: none;
+}
+
+.container .redes_sociais button img{
+    width: 40px;
 }
