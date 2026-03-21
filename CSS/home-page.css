@@ -70,13 +70,14 @@ body{
 }
 
 #p-hm{
+     margin-top: 0.2vw;
     font-size: 20px; 
     color: rgb(120, 120, 120);
-    margin-left: 0.8vw;
+    margin-left: 0.5vw;
 }
 
 #p-preco{
-    margin-top: 0.2vw;
+
     font-size: 20px; 
     color: rgb(251, 130, 123);
     margin-left: 0.8vw;
