@@ -1,7 +1,8 @@
 body{
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
-    background-color: rgb(225, 96, 61);
+    background-color: rgb(255, 255, 255);
+    width: 100%;
 }
 
 header{
@@ -49,33 +50,58 @@ header .cabecalho-logo #ajuda{
 
 
 
-
 .area-container{
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    width: 100%;
+    padding-top: 8vw;
+    padding-bottom: 8vw;
 }
 
 
 section .container{
-    width: 31vw;
-    height: 35vw;
+    width: 35vw;
+    height: 20vw;
     background-color: #ffff;
     border-radius: 3px;
     margin: 20px;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 0px 10px #616060;;
+}
+
+
+.container .container_titulo{
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: left;
     align-items: center;
 }
 
-.container #login{
+.container .container_titulo #seta{
+    font-size: 20px;
+    margin-right: 9.5vw;
+}
+
+
+.container .container_titulo #redefinir{
     font-size: 20px;
 }
 
+section .container .container_elementos{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .container input{
-    width: 280px; 
-    height: 30px;
+    width: 350px; 
+    height: 25px;
     padding: 7px;
     margin-bottom: 30px;
 
@@ -86,7 +112,7 @@ section .container{
 }
 
 .container #entre{
-    width: 300px; 
+    width: 370px; 
     height: 40px;
     padding: 8px;
     background-color: rgb(225, 96, 61);
@@ -97,72 +123,4 @@ section .container{
     cursor: pointer;
     margin-bottom: 3vh;
 
-}
-
-.container .links{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    font-size: 13px;
-    margin-bottom: 3vh;
-}
-
-.container .links #esqueci_senha{
-    text-decoration: none;
-    margin-right: 50px;
-}
-
-.container .links #sms{
-    text-decoration: none;
-}
-
-.container .ou{
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    margin-bottom: 3vh;
-}
-
-.container .ou hr{
-    flex: 1;
-    width: 130px;
-    border: none;
-    border-top: 1px solid #ccc;
-    margin: 0;
-    height: 0;
-}
-
-.container .redes_sociais{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-}
-
-.redes_sociais button{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    margin-left: 10px;
-    background-color: #fff;
-    border: 1px solid #ccc;
-    width: 100px;
-    height: 40px;
-}
-
-.container .redes_sociais button img{
-    width: 30px;
-
-}
-
-.container #novo{
-    font-size: 15px;
-    color:rgb(119, 119, 119)
-}
-
-.container #cadastrar{
-    font-size: 15px;
-    color:rgb(225, 96, 61);
-    text-decoration: none;
 }

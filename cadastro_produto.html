@@ -1,66 +1,63 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="CSS/login.css">
-    <link rel="stylesheet" href="CSS/rodape.css">
-    <title>Login</title>
-</head>
-<body>
-    <header>
-        <section class="cabecalho-logo">
-            <img src="img/logo.png">
-            <p id="logo"><b>Xhoppi</b></p>
-
-            <p id="entre">Entre</p>
-
-            <p id="ajuda">Precisa de Ajuda?</p>
-        </section>
+<htlm lang="pt-BR">
+    <head>
         
-    </header>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="css/cadastro_produto.css">
+        <link rel="stylesheet" href="CSS/rodape.css">
+        <title>Cadastrar produto</title>
+    </head>
+    <body>
+        <header>
+            <section class="cabecalho-logo">
+                <img src="img/logo.png">
+                <p>Xhopii</p>
+            </section>
+            <a href="login.html" id="sair">Sair</a>
+        </header>
 
-    <section class="area-container">
+        <nav>
+            <a href="home-page.html">Home</a>
+            <a href="cadastro_cliente.html">Cadastro Cliente </a>
+            <a href="cadastro_funcionario.html">Cadastro Funcionário </a>
+            <a href="cadastro_produto.html">Cadastro Produto </a>
+            <a href="#">Ver Clientes </a>
+            <a href="#">Ver Funcionários </a>
+            <a href="#">Ver Produtos</a>
+        </nav>
+
+
+
+        <section class="area-container">
         <section class="container">
-            <p id="login">Login</p>
+            <p id="cadastro_titulo"><b>Cadastrar Produto</b></p>
 
-            <input type="email" id="email" placeholder="Email">
+            <input type="text" id="nome" placeholder="Nome">
 
-            <input type="password" id="senha" placeholder="Senha">
+            <input type="text" id="fabricante" placeholder="Fabricante">
 
-            <a href="home-page.html"><button type="submit" value="enviar" id="entre">ENTRE</button></a>
+            <input type="text" id="descri" placeholder="Descrição">
 
-            <section class="links">
-                <a href="redefinir_senha.html" id="esqueci_senha">Esqueci minha senha</a>
+            <input type="number" id="valor" placeholder="Valor">
 
-                <a href="#" id="sms">Fazer login com SMS</a>
-            </section>
-            
-            <section class="ou">
-                <hr>
-                    <span>
-                        OU
-                    </span>
-                <hr>
-            </section>
+            <input type="number" id="qtd" placeholder="Quantidade">
 
-            <section class="redes_sociais">
-                <button id="facebook">
-                    <img src="img/facebook_logo.png">Facebook
-                </button>
-                <button id="google">
-                    <img src="img/google.png">Google
-                </button>
-                <button id="apple">
-                    <img src="img/apple_logo.png">Apple
-                </button>
-            </section>
+            <p id="selecionar"><b>Selecionar foto do produto:</b></p>
 
-            <p id="novo">Novo na xhoppi?<a href="cadastro_cliente.html" id="cadastrar"> Cadastar</a></p>
+            <label class="upload-container">
+                <span class="botao">Escolher arquivo</span>
+                <span id="nome-arquivo">Nenhum arquivo escolhido</span>
+                <input type="file" id="arquivo">
+            </label>
+
+            <a href="home-page.html"><button type="submit" value="enviar" id="cadastrar">CADASTRAR</button></a>
             
         </section>
     </section>
 
-    <footer>
+
+
+            <footer>
         <section>
             <h1>ATENDIMENTO AO CLIENTE</h1>
             <p id="p">Central de Ajuda</p>
@@ -116,6 +113,6 @@
      <p>© 2023 Xhopii. Todos os direitos acadêmicos reservados</p>
 
     </footer>
-    
-</body>
-</html>
+
+    </body>
+</htlm>

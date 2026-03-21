@@ -2,9 +2,10 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="CSS/login.css">
+    <link rel="stylesheet" href="CSS/redefinir_senha.css">
     <link rel="stylesheet" href="CSS/rodape.css">
-    <title>Login</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <title>Redefinir senha</title>
 </head>
 <body>
     <header>
@@ -12,7 +13,7 @@
             <img src="img/logo.png">
             <p id="logo"><b>Xhoppi</b></p>
 
-            <p id="entre">Entre</p>
+            <p id="entre">Redefinir senha</p>
 
             <p id="ajuda">Precisa de Ajuda?</p>
         </section>
@@ -21,41 +22,17 @@
 
     <section class="area-container">
         <section class="container">
-            <p id="login">Login</p>
 
-            <input type="email" id="email" placeholder="Email">
-
-            <input type="password" id="senha" placeholder="Senha">
-
-            <a href="home-page.html"><button type="submit" value="enviar" id="entre">ENTRE</button></a>
-
-            <section class="links">
-                <a href="redefinir_senha.html" id="esqueci_senha">Esqueci minha senha</a>
-
-                <a href="#" id="sms">Fazer login com SMS</a>
-            </section>
-            
-            <section class="ou">
-                <hr>
-                    <span>
-                        OU
-                    </span>
-                <hr>
+            <section class="container_titulo"> 
+                <a href="login.html" id="seta"><i class="bi bi-arrow-left"></i></a>
+                <p id="redefinir">Redefinir Senha</p>
             </section>
 
-            <section class="redes_sociais">
-                <button id="facebook">
-                    <img src="img/facebook_logo.png">Facebook
-                </button>
-                <button id="google">
-                    <img src="img/google.png">Google
-                </button>
-                <button id="apple">
-                    <img src="img/apple_logo.png">Apple
-                </button>
-            </section>
+            <section class="container_elementos">
+                <input type="email" id="email" placeholder="Email">
 
-            <p id="novo">Novo na xhoppi?<a href="cadastro_cliente.html" id="cadastrar"> Cadastar</a></p>
+                <a href="home-page.html"><button type="submit" value="enviar" id="entre">ENTRE</button></a>
+            </section>
             
         </section>
     </section>
