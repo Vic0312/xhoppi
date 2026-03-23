@@ -1,179 +1,149 @@
+*{
+    box-sizing: border-box;
+}
+
 body{
    margin: 0; 
    font-family: Arial, Helvetica, sans-serif;
-   background-color: aqua;
+   background-color: rgb(195, 195, 195);
 }
+
 
 header{
     background-color: rgb(244, 68, 29);
     width: 100%;
-    height: 6vh;
+    padding: 10px 20px;
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
+    align-items: center;
 }
 
 header a{
-    color: rgb(255, 255, 255);
-    font-size: 1.8vh;
-    margin-top: 0.2vh;
-    margin-right: 1.9vw;
-    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    font-size: 16px;
     text-decoration: none;
-    margin-bottom: 2vh;
-  
 }
 
 header section{
-    width: 7vw;
-    height: 6vh;
     display: flex;
-    flex-direction: row;
-    justify-content: end;
     align-items: center;
-   
-
-
+    gap: 10px;
 }
+
 header section img{
-    width: 2.5vw;
-    height: 4.5vh;
-    margin-left: 3vw;
+    width: 40px;
 }
 
 header section p{
-    color: rgb(255, 255, 255);
-    font-size: 3vh;
+    color: white;
+    font-size: 20px;
 }
 
+
 nav{
-   
     background-color: rgb(251, 119, 48);
     width: 100%;
-    height: 4vh;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-} 
+    padding: 10px;
+    text-align: center;
+}
 
 nav section a{
     text-decoration: none;
-    color: rgb(255, 255, 255);
-    margin-left: 2vw;
-    font-size: 0.9vw;
-    font-family: Arial, Helvetica, sans-serif;
-
+    color: white;
+    margin: 0 10px;
+    font-size: 14px;
 }
 
 
-
+.prod{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 #p1{
+    width: 100%;
+    max-width: 1200px;
+    padding: 15px;
+    margin: 0 auto;
     text-transform: uppercase;
+    background-color: #fff;
     color: rgb(244, 68, 29);
-    margin-top: 2vh;
-    font-family: Arial, Helvetica, sans-serif;
-    margin-top: 3.5vh;
-
-}
-
-
-
-#hr-hm{
-    width: 87vw;         
-  border-top: 2px solid rgb(244, 68, 29);
-  margin-left: 6.3vw;
-  
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 
 .tela{
-    width: 90vw;
-    height: 85vh; 
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0px 50px;
-    justify-content: center;
-    align-content: flex-start;
-    row-gap: 0px; 
-    background-color: rgb(255, 255, 255);
-    margin-left: 4.5vw;
-}
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
 
-#prod{
-    width: 90vw;
-    height: 4vh;
-    margin-left: 4.5vw;
-    background-color: rgb(255, 255, 255);
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+
+    background-color: white;
 }
 
 .camisavt{
-    width: 15vw;
-    height: 40vh;
-    border: 2.5px solid rgb(240, 240, 240);
+    width: 100%;
+    border: 2px solid rgb(240, 240, 240);
     border-radius: 8px;
-    margin-top: 1.5vh;
+    padding: 5px;
+
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
 }
 
 #selected{
-    border: 2.5px solid rgb(244, 68, 29);
-
-}
-
-.descricao{
-    width: 7vw;
-    height: 7vh;
-    margin-left: 0.4vw;
-    margin-top: 1.8vh;
+    border: 2px solid rgb(244, 68, 29);
 }
 
 .vtr{
-    width: 15vw;
-    height: 12vh;
+    width: 100%;
+    height: auto;
 }
 
 #p-hm{
-     margin-top: 0.2vw;
-    font-size: 18px; 
+    font-size: 14px;
     color: rgb(120, 120, 120);
-    margin-left: 0.5vw;
+    margin: 5px 0;
 }
 
 .tela section b{
-    font-size: 18px; 
-    margin-left: 0.5vw;
+    font-size: 14px;
+}
 
+
+.descricao{
+    width: 100%;
+    margin: 5px 0;
+    display: inline;
 }
 
 #p-preco{
-
-    font-size: 20px; 
+    font-size: 16px;
     color: rgb(251, 130, 123);
-    margin-left: 0.8vw;
 }
 
 #qtd{
-    margin-left: 3.7vw;
-    font-size: 15px; 
+    font-size: 12px;
     color: rgb(209, 204, 201);
 }
 
-#fabd{
-    font-size: 15px; 
+#fabd, #dscrc{
+    font-size: 12px;
     color: rgb(209, 204, 201);
-
 }
 
-#dscrc{
-    font-size: 15px; 
-    color: rgb(209, 204, 201);
-
+@media (max-width: 500px){
+    nav section a{
+        display: block;
+        margin: 5px 0;
+    }
 }
