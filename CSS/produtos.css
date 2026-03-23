@@ -1,6 +1,7 @@
 body{
    margin: 0; 
    font-family: Arial, Helvetica, sans-serif;
+   background-color: aqua;
 }
 
 header{
@@ -15,10 +16,11 @@ header{
 header a{
     color: rgb(255, 255, 255);
     font-size: 1.8vh;
-    margin-top: 1.7vh;
-    margin-right: 1.5vw;
+    margin-top: 0.2vh;
+    margin-right: 1.9vw;
     font-family: Arial, Helvetica, sans-serif;
     text-decoration: none;
+    margin-bottom: 2vh;
   
 }
 
@@ -55,11 +57,6 @@ nav{
     align-items: center;
 } 
 
-nav section{
-    
- 
-}
-
 nav section a{
     text-decoration: none;
     color: rgb(255, 255, 255);
@@ -69,34 +66,15 @@ nav section a{
 
 }
 
-#secrossel{
-    width: 90vw;
-    height: 30vh;
-    margin-bottom: 4vh;
-    margin-top: 4vh;
-    margin-left: 4vw;
-    margin-right:4vw;
-    background-color: rgb(244, 68, 29);
-    display: flex;
 
-}
 
-.rossel{
-    width: 90vw;
-    height: 30vh;
-}
-
-#img1a{
-  
-    width: 75vw;
-    height: 10vh;
-}
 
 #p1{
     text-transform: uppercase;
     color: rgb(244, 68, 29);
     margin-top: 2vh;
     font-family: Arial, Helvetica, sans-serif;
+    margin-top: 3.5vh;
 
 }
 
@@ -111,41 +89,68 @@ nav section a{
 
 
 .tela{
-    width: 100%;
-    height: 72vh; 
+    width: 90vw;
+    height: 85vh; 
     display: flex;
     flex-wrap: wrap;
     gap: 0px 50px;
     justify-content: center;
     align-content: flex-start;
     row-gap: 0px; 
+    background-color: rgb(255, 255, 255);
+    margin-left: 4.5vw;
+}
+
+#prod{
+    width: 90vw;
+    height: 4vh;
+    margin-left: 4.5vw;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    
 }
 
 .camisavt{
     width: 15vw;
-    height: 32vh;
+    height: 40vh;
     border: 2.5px solid rgb(240, 240, 240);
     border-radius: 8px;
     margin-top: 1.5vh;
     display: flex;
-    flex-direction: column;
-    
+    flex-wrap: wrap;
 }
 
-.pLink{
-    text-decoration: none;
+#selected{
+    border: 2.5px solid rgb(244, 68, 29);
+
+}
+
+.descricao{
+    width: 7vw;
+    height: 7vh;
+    margin-left: 0.4vw;
+    margin-top: 1.8vh;
 }
 
 .vtr{
-    width: 13vw;
-    height: 20vh;
+    width: 15vw;
+    height: 12vh;
 }
 
 #p-hm{
      margin-top: 0.2vw;
-    font-size: 20px; 
+    font-size: 18px; 
     color: rgb(120, 120, 120);
     margin-left: 0.5vw;
+}
+
+.tela section b{
+    font-size: 18px; 
+    margin-left: 0.5vw;
+
 }
 
 #p-preco{
@@ -159,4 +164,16 @@ nav section a{
     margin-left: 3.7vw;
     font-size: 15px; 
     color: rgb(209, 204, 201);
+}
+
+#fabd{
+    font-size: 15px; 
+    color: rgb(209, 204, 201);
+
+}
+
+#dscrc{
+    font-size: 15px; 
+    color: rgb(209, 204, 201);
+
 }
