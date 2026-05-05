@@ -1,0 +1,97 @@
+body{
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header{
+    width: 100%;
+    height: 70px;
+    background-color: rgb(225, 96, 61);
+    padding: 2px;
+}
+
+header .cabecalho-logo{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+header .cabecalho-logo img{
+    width: 4%;
+}
+
+header .cabecalho-logo h1{
+    color: rgb(255, 255, 255);
+}
+
+nav{
+    width: 100%;
+    height: 50px;
+    background-color: rgb(215, 215, 215);
+}
+
+nav .nav-link{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+nav .nav-link a{
+    text-decoration: none;
+    color: rgb(225, 96, 61);
+    margin-left: 2%;
+}
+
+.conteudo{
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+section .prod-img-repositorio{
+    margin-top: 2%;
+}
+
+section .prod-img-repositorio img{
+    width:80px;
+    opacity: 50%;
+    margin-top: 15%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.conteudo img{
+    width:40%;
+    height: 50%;
+}
+
+.conteudo .produto-detalhe h2{
+    color: rgb(0, 0, 0);
+    font-size: 25px;
+}
+
+#valor{
+    color: rgb(225, 96, 61);
+    font-size: 25px;
+}
+
+#detalhe-peca
+{
+    font-size: 14px;
+}
+
+.produto-detalhe button{
+    width: 140px;
+    height: 70px;
+    background-color: rgb(225, 96, 61);
+    color: rgb(215, 215, 215);
+    font-size: 13px;
+    border: none;
+}

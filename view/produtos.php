@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../CSS/produtos.css">
+    <link rel="stylesheet" href="../CSS/rodape.css">
+
+    
+
+    <title>Produtos</title>
+</head>
+<body>
+
+    <header>
+        <section>
+            <img src="../img/logo.png">
+            <p>Xhopii</p>
+        </section>
+        <a href="login.html"><p>Sair</p></a>
+    </header>
+
+        <nav>
+            <section>
+                <a href="home-page.php">Home</a>
+                <a href="cadastro_cliente.php">Cadastro Cliente </a>
+                <a href="cadastro_funcionario.php">Cadastro Funcionário </a>
+                <a href="cadastro_produto.php">Cadastro Produto </a>
+                <a href="#">Ver Clientes </a>
+                <a href="#">Ver Funcionários </a>
+                <a href="produtos.php">Ver Produtos</a>
+            </section>
+        </nav>
+
+    <section class="prod">
+        <p id="p1"><b>PRODUTOS</b></p>
+    </section>
+ 
+    <section class="tela">
+       
+
+        <section class="camisavt">
+            <img class="vtr "src="../img/produto1.png">
+            <p id = "p-hm">Camisa Desenvolvedor Front-End CSS </p>
+            <p><b>Fabricante: </b> <txt id="fabd">Eletiva Uniformes</txt></p>
+            <p> <section class="descricao"><b>Descrição: </b><txt id="dscrc">Uma camisa ideal para programar pro mais de 12 horas</txt></section></p>
+            <p id = "p-preco">R$ 59,90  <text id="qtd">171 disponíveis</text></p>
+        </section>
+
+        <section class="camisavt">
+            <img class="vtr "src="../img/produto1.png">
+            <p id = "p-hm">Camisa Desenvolvedor Front-End CSS </p>
+            <p><b>Fabricante: </b> <txt id="fabd">Eletiva Uniformes</txt></p>
+            <p> <section class="descricao"><b>Descrição: </b><txt id="dscrc">Uma camisa ideal para programar pro mais de 12 horas</txt></section></p>
+            <p id = "p-preco">R$ 59,90  <text id="qtd">171 disponíveis</text></p>
+        </section>
+
+        <section class="camisavt">
+            <img class="vtr "src="../img/produto1.png">
+            <p id = "p-hm">Camisa Desenvolvedor Front-End CSS </p>
+            <p><b>Fabricante: </b> <txt id="fabd">Eletiva Uniformes</txt></p>
+            <p> <section class="descricao"><b>Descrição: </b><txt id="dscrc">Uma camisa ideal para programar pro mais de 12 horas</txt></section></p>
+            <p id = "p-preco">R$ 59,90  <text id="qtd">171 disponíveis</text></p>
+        </section>
+
+        <section class="camisavt">
+            <img class="vtr "src="../img/produto1.png">
+            <p id = "p-hm">Camisa Desenvolvedor Front-End CSS </p>
+            <p><b>Fabricante: </b> <txt id="fabd">Eletiva Uniformes</txt></p>
+            <p> <section class="descricao"><b>Descrição: </b><txt id="dscrc">Uma camisa ideal para programar pro mais de 12 horas</txt></section></p>
+            <p id = "p-preco">R$ 59,90  <text id="qtd">171 disponíveis</text></p>
+        </section>
+
+        <section class="camisavt">
+            <img class="vtr "src="../img/produto1.png">
+            <p id = "p-hm">Camisa Desenvolvedor Front-End CSS </p>
+            <p><b>Fabricante: </b> <txt id="fabd">Eletiva Uniformes</txt></p>
+            <p> <section class="descricao"><b>Descrição: </b><txt id="dscrc">Uma camisa ideal para programar pro mais de 12 horas</txt></section></p>
+            <p id = "p-preco">R$ 59,90  <text id="qtd">171 disponíveis</text></p>
+        </section>
+
+        <section class="camisavt">
+            <img class="vtr "src="../img/produto1.png">
+            <p id = "p-hm">Camisa Desenvolvedor Front-End CSS </p>
+            <p><b>Fabricante: </b> <txt id="fabd">Eletiva Uniformes</txt></p>
+            <p> <section class="descricao"><b>Descrição: </b><txt id="dscrc">Uma camisa ideal para programar pro mais de 12 horas</txt></section></p>
+            <p id = "p-preco">R$ 59,90  <text id="qtd">171 disponíveis</text></p>
+        </section>
+
+        <section class="camisavt">
+            <img class="vtr "src="../img/produto1.png">
+            <p id = "p-hm">Camisa Desenvolvedor Front-End CSS </p>
+            <p><b>Fabricante: </b> <txt id="fabd">Eletiva Uniformes</txt></p>
+            <p> <section class="descricao"><b>Descrição: </b><txt id="dscrc">Uma camisa ideal para programar pro mais de 12 horas</txt></section></p>
+            <p id = "p-preco">R$ 59,90  <text id="qtd">171 disponíveis</text></p>
+        </section>
+
+        <section class="camisavt">
+            <img class="vtr "src="../img/produto1.png">
+            <p id = "p-hm">Camisa Desenvolvedor Front-End CSS </p>
+            <p><b>Fabricante: </b> <txt id="fabd">Eletiva Uniformes</txt></p>
+            <p> <section class="descricao"><b>Descrição: </b><txt id="dscrc">Uma camisa ideal para programar pro mais de 12 horas</txt></section></p>
+            <p id = "p-preco">R$ 59,90  <text id="qtd">171 disponíveis</text></p>
+        </section>
+
+        <section class="camisavt">
+            <img class="vtr "src="../img/produto1.png">
+            <p id = "p-hm">Camisa Desenvolvedor Front-End CSS </p>
+            <p><b>Fabricante: </b> <txt id="fabd">Eletiva Uniformes</txt></p>
+            <p> <section class="descricao"><b>Descrição: </b><txt id="dscrc">Uma camisa ideal para programar pro mais de 12 horas</txt></section></p>
+            <p id = "p-preco">R$ 59,90  <text id="qtd">171 disponíveis</text></p>
+        </section>
+
+        <section class="camisavt">
+            <img class="vtr "src="../img/produto1.png">
+            <p id = "p-hm">Camisa Desenvolvedor Front-End CSS </p>
+            <p><b>Fabricante: </b> <txt id="fabd">Eletiva Uniformes</txt></p>
+            <p> <section class="descricao"><b>Descrição: </b><txt id="dscrc">Uma camisa ideal para programar pro mais de 12 horas</txt></section></p>
+            <p id = "p-preco">R$ 59,90  <text id="qtd">171 disponíveis</text></p>
+        </section>
+
+    </section>
+    
+        <footer>
+        <section class="container-footer">
+        <section>
+            <h1 class ="h1-rdp">ATENDIMENTO AO CLIENTE</h1>
+
+            <p class="p-rdp">Central de Ajuda</p>
+            <p class="p-rdp">Como Comprar </p>
+            <p class="p-rdp">Métodos de pagamento</p>
+            <p class="p-rdp">Garantia Xhopii </p>
+            <p class="p-rdp">Devolução e Reembolso</p>
+            <p class="p-rdp">Fale Conosco</p>
+            <p class="p-rdp">Ouvidoria</p>
+
+        </section>
+
+        <section>
+            <h1 class ="h1-rdp">SOBRE A XHOPII</h1>
+
+            <p class="p-rdp">Sobre Nós</p>
+            <p class="p-rdp">Politicas Xhopii</p>
+            <p class="p-rdp">Politica de Privacidade</p>
+            <p class="p-rdp">Programa de Aliados Xhopii</p>
+            <p class="p-rdp">Seja um Entregador Xhopii</p>
+            <p class="p-rdp">Ofertas Relâmpago</p>
+            <p class="p-rdp">Xhopii Blog</p>
+            <p class="p-rdp">Impresa</p>
+
+        </section>
+
+        <section>
+            <h1 class ="h1-rdp">PAGAMENTO</h1>
+            
+            <a><img class="imgpg" src="../img/logos.png"></a>
+            
+
+        </section>
+
+        <section>
+            <h1 class ="h1-rdp">SIGA-NOS</h1>
+            <p class="p-rdp"> <img class="icon" src="../img/insta.png"> Instagram</p>
+            <p class="p-rdp"> <img class="icon" src="../img/twiter.png"> Twitter</p>
+            <p class="p-rdp"> <img class="icon" src="../img/facebook.png"> Facebook</p>
+            <p class="p-rdp"> <img class="icon" src="../img/youtube.avif"> YouTube</p>
+            <p class="p-rdp"> <img class="icon" src="../img/linkedin.png"> Linkedin</p>
+
+        </section>
+
+        <section>
+            <h1 class ="h1-rdp">ATENDIMENTO AO CLIENTE</h1>
+            <p class="p-rdp"> <img class="qr" src="../img/qrcode.webp"></p>
+            <p class="p-rdp"> <img class="stre" src="../img/gplogo.png"></p>
+            <p class="p-rdp"> <img class="stre" src="../img/applogo.png"></p>
+    
+        </section>
+     
+        <hr id="hr-rdp">
+     </section>
+     
+     <p class="p-rdp">© 2023 Xhopii. Todos os direitos acadêmicos reservados</p>
+    </footer>
+
+</body>
+</html>

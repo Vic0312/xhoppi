@@ -15,13 +15,13 @@
         </header>
 
         <nav>
-            <a href="home-page.html">Home</a>
-            <a href="cadastro_cliente.html">Cadastro Cliente </a>
-            <a href="cadastro_funcionario.html">Cadastro Funcionário </a>
-            <a href="cadastro_produto.html">Cadastro Produto </a>
+            <a href="home-page.php">Home</a>
+            <a href="cadastro_cliente.php">Cadastro Cliente </a>
+            <a href="cadastro_funcionario.php">Cadastro Funcionário </a>
+            <a href="cadastro_produto.php">Cadastro Produto </a>
             <a href="#">Ver Clientes </a>
             <a href="#">Ver Funcionários </a>
-            <a href="produtos.html">Ver Produtos</a>
+            <a href="produtos.php">Ver Produtos</a>
         </nav>
 
         <section class="conteudo">
