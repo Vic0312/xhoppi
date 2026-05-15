@@ -22,6 +22,22 @@ class BancoDeDados{
         $conexao = mysqli_connect($this->host,$this->login,$this->senha,$this->dataBase);
         return($conexao);
     }
+
+    public function autenticarFuncionario($email, $senha) {
+        $conexao = $this->conectarBD();
+        
+        $email = mysqli_real_escape_string($conexao, $email);
+        $senha = mysqli_real_escape_string($conexao, $senha);
+
+        $consulta = "SELECT * FROM funcionario WHERE email = '$email' AND senha = '$senha'";
+        $resultado = mysqli_query($conexao, $consulta);
+
+        if (mysqli_num_rows($resultado) == 1) {
+            return mysqli_fetch_assoc($resultado); 
+        } else {
+            return false;
+        }
+    }
     
     public function inserirCliente($cliente){
         

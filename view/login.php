@@ -21,42 +21,42 @@
 
     <section class="area-container">
         <section class="container">
-            <p id="login">Login</p>
+            <form method="POST" action="../processamento/processamento.php">
+                <p id="login">Login</p>
 
-            <input type="email" id="email" placeholder="Email">
+                <input type="email" id="email" placeholder="Email" name="inputEmailLog">
 
-            <input type="password" id="senha" placeholder="Senha">
+                <input type="password" id="senha" placeholder="Senha" name="inputSenhaLog">
 
-            <a href="home-page.php"><button type="submit" value="enviar" id="entre">ENTRE</button></a>
+                <button type="submit" value="enviar" id="entre">ENTRE</button>
+                <section class="links">
+                    <a href="redefinir_senha.php" id="esqueci_senha">Esqueci minha senha</a>
 
-            <section class="links">
-                <a href="redefinir_senha.php" id="esqueci_senha">Esqueci minha senha</a>
+                    <a href="#" id="sms">Fazer login com SMS</a>
+                </section>
+                
+                <section class="ou">
+                    <hr>
+                        <span>
+                            OU
+                        </span>
+                    <hr>
+                </section>
 
-                <a href="#" id="sms">Fazer login com SMS</a>
-            </section>
-            
-            <section class="ou">
-                <hr>
-                    <span>
-                        OU
-                    </span>
-                <hr>
-            </section>
+                <section class="redes_sociais">
+                    <button id="facebook">
+                        <img src="../img/facebook_logo.png">Facebook
+                    </button>
+                    <button id="google">
+                        <img src="../img/google.png">Google
+                    </button>
+                    <button id="apple">
+                        <img src="../img/apple_logo.png">Apple
+                    </button>
+                </section>
 
-            <section class="redes_sociais">
-                <button id="facebook">
-                    <img src="../img/facebook_logo.png">Facebook
-                </button>
-                <button id="google">
-                    <img src="../img/google.png">Google
-                </button>
-                <button id="apple">
-                    <img src="../img/apple_logo.png">Apple
-                </button>
-            </section>
-
-            <p id="novo">Novo na xhoppi?<a href="cadastro_cliente.php" id="cadastrar"> Cadastar</a></p>
-            
+                <p id="novo">Novo na xhoppi?<a href="cadastro_cliente.php" id="cadastrar"> Cadastar</a></p>
+            </form>
         </section>
     </section>
 

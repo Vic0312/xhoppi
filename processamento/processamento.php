@@ -8,13 +8,16 @@ $controlador = new Controlador();
 
 //Login
 if(isset($_POST['inputEmailLog']) && isset($_POST['inputSenhaLog'])){
-
-    $_SESSION['estaLogado'] = TRUE;
     $email = $_POST['inputEmailLog'];
     $senha = $_POST['inputSenhaLog'];
 
-    //echo "Email: " . $email . "Senha: " . $senha;
-    header('Location:../view/home.php');
+    $sucesso = $controlador->efetuarLogin($email, $senha);
+
+    if($sucesso){
+        header('Location:../view/home-page.php');
+    } else {
+        header('Location:../view/login.php?erro=1');
+    }
     die();
 }
 

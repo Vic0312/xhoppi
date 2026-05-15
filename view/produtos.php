@@ -5,8 +5,6 @@
     <link rel="stylesheet" href="../CSS/produtos.css">
     <link rel="stylesheet" href="../CSS/rodape.css">
 
-    
-
     <title>Produtos</title>
 </head>
 <body>
@@ -16,7 +14,7 @@
             <img src="../img/logo.png">
             <p>Xhopii</p>
         </section>
-        <a href="login.html"><p>Sair</p></a>
+        <a href="logout.php"><p>Sair</p></a>
     </header>
 
         <nav>

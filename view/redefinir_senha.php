@@ -2,15 +2,15 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="CSS/redefinir_senha.css">
-    <link rel="stylesheet" href="CSS/rodape.css">
+    <link rel="stylesheet" href="../CSS/redefinir_senha.css">
+    <link rel="stylesheet" href="../CSS/rodape.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
     <title>Redefinir senha</title>
 </head>
 <body>
     <header>
         <section class="cabecalho-logo">
-            <img src="img/logo.png">
+            <img src="../img/logo.png">
             <p id="logo"><b>Xhoppi</b></p>
 
             <p id="entre">Redefinir senha</p>
@@ -24,14 +24,14 @@
         <section class="container">
 
             <section class="container_titulo"> 
-                <a href="login.html" id="seta"><i class="bi bi-arrow-left"></i></a>
+                <a href="login.php" id="seta"><i class="bi bi-arrow-left"></i></a>
                 <p id="redefinir">Redefinir Senha</p>
             </section>
 
             <section class="container_elementos">
                 <input type="email" id="email" placeholder="Email">
 
-                <a href="home-page.html"><button type="submit" value="enviar" id="entre">ENTRE</button></a>
+                <a href="home-page.php"><button type="submit" value="enviar" id="entre">ENTRE</button></a>
             </section>
             
         </section>

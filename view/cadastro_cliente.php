@@ -14,7 +14,7 @@
                 <img src="../img/logo.png">
                 <p>Xhopii</p>
             </section>
-            <a href="login.php" id="sair">Sair</a>
+            <a href="logout.php" id="sair">Sair</a>
         </header>
 
         <nav>

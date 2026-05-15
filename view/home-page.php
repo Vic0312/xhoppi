@@ -1,3 +1,12 @@
+<?php
+session_start();
+
+if (!isset($_SESSION['estaLogado']) || $_SESSION['estaLogado'] !== TRUE) {
+
+    header('Location: login.php');
+    exit();
+}
+?>
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -17,7 +26,7 @@
             <img src="../img/logo.png">
             <p>Xhopii</p>
         </section>
-        <a href="login.html"><p>Sair</p></a>
+        <a href="logout.php"><p>Sair</p></a>
     </header>
 
         <nav>

@@ -11,6 +11,20 @@ class Controlador{
         $this->bancoDeDados = new BancoDeDados("localhost","root","","xhoppi");
     }
 
+    public function efetuarLogin($email, $senha) {
+        $dadosFuncionario = $this->bancoDeDados->autenticarFuncionario($email, $senha);
+        
+        if ($dadosFuncionario) {
+            $_SESSION['estaLogado'] = true;
+            $_SESSION['usuario_id'] = $dadosFuncionario['cpf'];
+            $_SESSION['usuario_nome'] = $dadosFuncionario['nome'];
+            return true;
+        } else {
+            $_SESSION['estaLogado'] = false;
+            return false;
+        }
+    }
+
     public function cadastrarProduto($nome, $fabricante, $descricao, $valor, $quantidade, $foto_prod){
         
         $produto = new Produto($nome,$fabricante,$descricao,$valor,$quantidade,$foto_prod);
