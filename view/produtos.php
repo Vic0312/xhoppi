@@ -23,8 +23,8 @@
                 <a href="cadastro_cliente.php">Cadastro Cliente </a>
                 <a href="cadastro_funcionario.php">Cadastro Funcionário </a>
                 <a href="cadastro_produto.php">Cadastro Produto </a>
-                <a href="#">Ver Clientes </a>
-                <a href="#">Ver Funcionários </a>
+                <a href="ver_cliente.php">Ver Clientes </a>
+                <a href="ver_funcionarios.php">Ver Funcionários </a>
                 <a href="produtos.php">Ver Produtos</a>
             </section>
         </nav>
