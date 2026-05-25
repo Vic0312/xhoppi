@@ -69,20 +69,51 @@ if(isset($_POST['inputNomeFunc']) && isset($_POST['inputSobrenomeFunc']) &&
 //Cadastro de Produto
 if(!empty($_POST['inputNomeProd']) && !empty($_POST['inputFabricanteProd']) && 
    !empty($_POST['inputDescricaoProd']) && !empty($_POST['inputValorProd']) &&
-   !empty($_POST['inputQtdProd'])){
+   !empty($_POST['inputQtdProd']) && isset($_FILES['inputFotoProd'])){
 
     $nome = $_POST['inputNomeProd'];
     $fabricante = $_POST['inputFabricanteProd'];
     $descricao = $_POST['inputDescricaoProd'];
     $valor = $_POST['inputValorProd'];
     $quantidade = $_POST['inputQtdProd'];
-    $foto_prod = $_POST['inputFotoProd'];
+
+    $foto_prod = "";
+
+    //Upload da imagem
+    if($_FILES['inputFotoProd']['error'] == 0){
+
+        $pasta = "../uploads/produtos/";
+
+        //Cria a pasta se não existir
+        if(!is_dir($pasta)){
+            mkdir($pasta, 0777, true);
+        }
+
+        //Nome único para evitar conflito
+        $nomeArquivo = uniqid() . "_" . $_FILES['inputFotoProd']['name'];
+
+        $caminhoArquivo = $pasta . $nomeArquivo;
+
+        //Move a imagem para a pasta
+        move_uploaded_file($_FILES['inputFotoProd']['tmp_name'], $caminhoArquivo);
+
+        //Caminho salvo no banco
+        $foto_prod = "uploads/produtos/" . $nomeArquivo;
+    }
     
-    $controlador->cadastrarProduto($nome,$fabricante,$descricao,$valor,$quantidade,$foto_prod);
+    $controlador->cadastrarProduto(
+        $nome,
+        $fabricante,
+        $descricao,
+        $valor,
+        $quantidade,
+        $foto_prod
+    );
 
     header('Location:../view/cadastro_produto.php');
     die();
 }
+
 
 
 

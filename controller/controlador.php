@@ -46,19 +46,61 @@ class Controlador{
         
     }
 
-    public function visualizarProdutos(){
-        
-        $listaProdutos = $this->bancoDeDados->retornarProdutos();
+    public function visualizarProdutosHome(){
+
+        $listaProdutos = $this->bancoDeDados->retornarProdutosHome();
+        $txt = "";
+    
         while($produto = mysqli_fetch_assoc($listaProdutos)){
-            return "<section class=\"conteudo-bloco\">" .
-                   "<h2>" . $produto["nome"] . "</h2>" .
-                   "<p>Fabricante: " . $produto["fabricante"] . "</p>" .
-                   "<p>Descrição: " . $produto["descricao"] . "</p>" . 
-                   "<p>Valor: " . $produto["valor"] . "</p>" .
-                   "<p>Quantidade: " . $produto["quantidade"] . "</p>" .
-                   "<p>Foto produto: " . $produto["foto_prod"] . "</p>" .
-                   "</section>";
+    
+            $txt .= "<a class='pLink' href='produto.php'> 
+                     
+                     <section class='camisavt'>" .
+    
+                    "<img class='vtr' src='../". $produto['foto_prod']. "'>" .
+    
+                    "<p id='p-hm'>" . $produto['nome'] . "</p>" .
+    
+                    "<p id='p-preco'>R$ " . $produto['valor'] .
+    
+                    " <text id='qtd'>" . $produto['quantidade'] . " Disponíveis 
+                    
+                    </text> </p>" .
+    
+                    "</section> </a>";
         }
+    
+        return $txt;
+    }
+
+    public function visualizarProdutosEstoque(){
+
+        $listaProdutos = $this->bancoDeDados->retornarProdutosEstoque();
+        $txt = "";
+    
+        while($produto = mysqli_fetch_assoc($listaProdutos)){
+    
+            $txt .= "<section class='camisavt'>" .
+    
+                    "<img class='vtr' src='../". $produto['foto_prod']. "'>" .
+    
+                    "<p id='p-hm'>" . $produto['nome'] . "</p>" .
+
+                    "<p><b>Fabricante: </b> <txt id='fabd'>". $produto['fabricante']."</txt>" .
+                    
+                    "<p> <section class='descricao'><b>Descrição: </b><txt id='dscrc'>". $produto['descricao']. "</txt> </section> </p>" .
+    
+                    "<p id='p-preco'>R$ " . $produto['valor'] .
+    
+                    " <text id='qtd'>" . $produto['quantidade'] . " Disponíveis 
+                    
+                    </text> </p>" .
+    
+                    "</section> </a>";
+        }
+
+    
+        return $txt;
     }
 
 

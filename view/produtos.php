@@ -1,3 +1,6 @@
+<?php
+require_once("../controller/controlador.php");
+?>
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -36,85 +39,10 @@
     <section class="tela">
        
 
-        <section class="camisavt">
-            <img class="vtr "src="../img/produto1.png">
-            <p id = "p-hm">Camisa Desenvolvedor Front-End CSS </p>
-            <p><b>Fabricante: </b> <txt id="fabd">Eletiva Uniformes</txt></p>
-            <p> <section class="descricao"><b>Descrição: </b><txt id="dscrc">Uma camisa ideal para programar pro mais de 12 horas</txt></section></p>
-            <p id = "p-preco">R$ 59,90  <text id="qtd">171 disponíveis</text></p>
-        </section>
-
-        <section class="camisavt">
-            <img class="vtr "src="../img/produto1.png">
-            <p id = "p-hm">Camisa Desenvolvedor Front-End CSS </p>
-            <p><b>Fabricante: </b> <txt id="fabd">Eletiva Uniformes</txt></p>
-            <p> <section class="descricao"><b>Descrição: </b><txt id="dscrc">Uma camisa ideal para programar pro mais de 12 horas</txt></section></p>
-            <p id = "p-preco">R$ 59,90  <text id="qtd">171 disponíveis</text></p>
-        </section>
-
-        <section class="camisavt">
-            <img class="vtr "src="../img/produto1.png">
-            <p id = "p-hm">Camisa Desenvolvedor Front-End CSS </p>
-            <p><b>Fabricante: </b> <txt id="fabd">Eletiva Uniformes</txt></p>
-            <p> <section class="descricao"><b>Descrição: </b><txt id="dscrc">Uma camisa ideal para programar pro mais de 12 horas</txt></section></p>
-            <p id = "p-preco">R$ 59,90  <text id="qtd">171 disponíveis</text></p>
-        </section>
-
-        <section class="camisavt">
-            <img class="vtr "src="../img/produto1.png">
-            <p id = "p-hm">Camisa Desenvolvedor Front-End CSS </p>
-            <p><b>Fabricante: </b> <txt id="fabd">Eletiva Uniformes</txt></p>
-            <p> <section class="descricao"><b>Descrição: </b><txt id="dscrc">Uma camisa ideal para programar pro mais de 12 horas</txt></section></p>
-            <p id = "p-preco">R$ 59,90  <text id="qtd">171 disponíveis</text></p>
-        </section>
-
-        <section class="camisavt">
-            <img class="vtr "src="../img/produto1.png">
-            <p id = "p-hm">Camisa Desenvolvedor Front-End CSS </p>
-            <p><b>Fabricante: </b> <txt id="fabd">Eletiva Uniformes</txt></p>
-            <p> <section class="descricao"><b>Descrição: </b><txt id="dscrc">Uma camisa ideal para programar pro mais de 12 horas</txt></section></p>
-            <p id = "p-preco">R$ 59,90  <text id="qtd">171 disponíveis</text></p>
-        </section>
-
-        <section class="camisavt">
-            <img class="vtr "src="../img/produto1.png">
-            <p id = "p-hm">Camisa Desenvolvedor Front-End CSS </p>
-            <p><b>Fabricante: </b> <txt id="fabd">Eletiva Uniformes</txt></p>
-            <p> <section class="descricao"><b>Descrição: </b><txt id="dscrc">Uma camisa ideal para programar pro mais de 12 horas</txt></section></p>
-            <p id = "p-preco">R$ 59,90  <text id="qtd">171 disponíveis</text></p>
-        </section>
-
-        <section class="camisavt">
-            <img class="vtr "src="../img/produto1.png">
-            <p id = "p-hm">Camisa Desenvolvedor Front-End CSS </p>
-            <p><b>Fabricante: </b> <txt id="fabd">Eletiva Uniformes</txt></p>
-            <p> <section class="descricao"><b>Descrição: </b><txt id="dscrc">Uma camisa ideal para programar pro mais de 12 horas</txt></section></p>
-            <p id = "p-preco">R$ 59,90  <text id="qtd">171 disponíveis</text></p>
-        </section>
-
-        <section class="camisavt">
-            <img class="vtr "src="../img/produto1.png">
-            <p id = "p-hm">Camisa Desenvolvedor Front-End CSS </p>
-            <p><b>Fabricante: </b> <txt id="fabd">Eletiva Uniformes</txt></p>
-            <p> <section class="descricao"><b>Descrição: </b><txt id="dscrc">Uma camisa ideal para programar pro mais de 12 horas</txt></section></p>
-            <p id = "p-preco">R$ 59,90  <text id="qtd">171 disponíveis</text></p>
-        </section>
-
-        <section class="camisavt">
-            <img class="vtr "src="../img/produto1.png">
-            <p id = "p-hm">Camisa Desenvolvedor Front-End CSS </p>
-            <p><b>Fabricante: </b> <txt id="fabd">Eletiva Uniformes</txt></p>
-            <p> <section class="descricao"><b>Descrição: </b><txt id="dscrc">Uma camisa ideal para programar pro mais de 12 horas</txt></section></p>
-            <p id = "p-preco">R$ 59,90  <text id="qtd">171 disponíveis</text></p>
-        </section>
-
-        <section class="camisavt">
-            <img class="vtr "src="../img/produto1.png">
-            <p id = "p-hm">Camisa Desenvolvedor Front-End CSS </p>
-            <p><b>Fabricante: </b> <txt id="fabd">Eletiva Uniformes</txt></p>
-            <p> <section class="descricao"><b>Descrição: </b><txt id="dscrc">Uma camisa ideal para programar pro mais de 12 horas</txt></section></p>
-            <p id = "p-preco">R$ 59,90  <text id="qtd">171 disponíveis</text></p>
-        </section>
+            <?php
+            $controlador = new Controlador();
+            echo $controlador->visualizarProdutosEstoque();
+            ?>
 
     </section>
     

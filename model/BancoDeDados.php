@@ -98,8 +98,15 @@ public function retornarFuncionarios(){
     return $listaFuncionario;
 }
     
-    public function retornarProdutos(){
-        $conexao = conectarBD();
+    public function retornarProdutosHome(){
+        $conexao = $this->conectarBD();
+        $consulta = "SELECT * FROM produto order by rand() limit 10";
+        $listaProdutos = mysqli_query($conexao,$consulta);
+        return $listaProdutos;
+    }
+
+    public function retornarProdutosEstoque(){
+        $conexao = $this->conectarBD();
         $consulta = "SELECT * FROM produto";
         $listaProdutos = mysqli_query($conexao,$consulta);
         return $listaProdutos;

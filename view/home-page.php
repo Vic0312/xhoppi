@@ -1,11 +1,14 @@
 <?php
 session_start();
 
+
 if (!isset($_SESSION['estaLogado']) || $_SESSION['estaLogado'] !== TRUE) {
 
     header('Location: login.php');
     exit();
 }
+require_once("../controller/controlador.php");
+
 ?>
 <!DOCTYPE html>
 <html lang="pt-BR">
@@ -83,70 +86,15 @@ if (!isset($_SESSION['estaLogado']) || $_SESSION['estaLogado'] !== TRUE) {
     <section class="area-tela">
         <hr id="hr-hm">
     <section class="tela">
-        <a class="pLink" href="produto.php"><section class="camisavt">
-            <img class="vtr "src="../img/produto1.png">
-            <p id = "p-hm">Camisa Desenvolvedor Front-End CSS </p>
-            <p id = "p-preco">R$ 59,90  <text id="qtd">171 disponíveis</text></p>
-        </section></a>
-
-        <a class="pLink" href="produto.php"><section class="camisavt">
-            <img class="vtr "src="../img/produto1.png">
-            <p id = "p-hm">Camisa Desenvolvedor Front-End CSS </p>
-            <p id = "p-preco">R$ 59,90  <text id="qtd">171 disponíveis</text></p>
-        </section></a>
-
-        <a class="pLink" href="produto.php"><section class="camisavt">
-            <img class="vtr "src="../img/produto1.png">
-            <p id = "p-hm">Camisa Desenvolvedor Front-End CSS </p>
-            <p id = "p-preco">R$ 59,90  <text id="qtd">171 disponíveis</text></p>
-        </section></a>
-
-        <a class="pLink" href="produto.php"><section class="camisavt">
-            <img class="vtr "src="../img/produto1.png">
-            <p id = "p-hm">Camisa Desenvolvedor Front-End CSS </p>
-            <p id = "p-preco">R$ 59,90  <text id="qtd">171 disponíveis</text></p>
-        </section></a>
-
-        <a class="pLink" href="produto.php"><section class="camisavt">
-            <img class="vtr "src="../img/produto1.png">
-            <p id = "p-hm">Camisa Desenvolvedor Front-End CSS </p>
-            <p id = "p-preco">R$ 59,90  <text id="qtd">171 disponíveis</text></p>
-        </section></a>
-
-        <a class="pLink" href="produto.php"><section class="camisavt">
-            <img class="vtr "src="../img/produto1.png">
-            <p id = "p-hm">Camisa Desenvolvedor Front-End CSS </p>
-            <p id = "p-preco">R$ 59,90  <text id="qtd">171 disponíveis</text></p>
-        </section></a>
-
-        <a class="pLink" href="produto.php"><section class="camisavt">
-            <img class="vtr "src="../img/produto1.png">
-            <p id = "p-hm">Camisa Desenvolvedor Front-End CSS </p>
-            <p id = "p-preco">R$ 59,90  <text id="qtd">171 disponíveis</text></p>
-        </section></a>
-
-        <a class="pLink" href="produto.php"><section class="camisavt">
-            <img class="vtr "src="../img/produto1.png">
-            <p id = "p-hm">Camisa Desenvolvedor Front-End CSS </p>
-            <p id = "p-preco">R$ 59,90  <text id="qtd">171 disponíveis</text></p>
-        </section></a>
-
-        <a class="pLink" href="produto.php"><section class="camisavt">
-            <img class="vtr "src="../img/produto1.png">
-            <p id = "p-hm">Camisa Desenvolvedor Front-End CSS </p>
-            <p id = "p-preco">R$ 59,90  <text id="qtd">171 disponíveis</text></p>
-        </section></a>
-
-        <a class="pLink" href="produto.php"><section class="camisavt">
-            <img class="vtr "src="../img/produto1.png">
-            <p id = "p-hm">Camisa Desenvolvedor Front-End CSS </p>
-            <p id = "p-preco">R$ 59,90  <text id="qtd">171 disponíveis</text></p>
-        </section></a>
-
+        
+            <?php
+            $controlador = new Controlador();
+            echo $controlador->visualizarProdutosHome();
+            ?>
+        
     </section>
 </section>
     
-
    
     <footer>
         <section class="container-footer">
