@@ -37,8 +37,6 @@ require_once("../controller/controlador.php");
     </section>
  
     <section class="tela">
-       
-
             <?php
             $controlador = new Controlador();
             echo $controlador->visualizarProdutosEstoque();

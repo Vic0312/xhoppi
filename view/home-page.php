@@ -86,7 +86,6 @@ require_once("../controller/controlador.php");
     <section class="area-tela">
         <hr id="hr-hm">
     <section class="tela">
-        
             <?php
             $controlador = new Controlador();
             echo $controlador->visualizarProdutosHome();

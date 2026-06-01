@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 01-Jun-2026 às 18:54
+-- Tempo de geração: 01-Jun-2026 às 21:46
 -- Versão do servidor: 10.4.27-MariaDB
 -- versão do PHP: 8.2.0
 
@@ -44,7 +44,8 @@ CREATE TABLE `cliente` (
 
 INSERT INTO `cliente` (`cpf`, `nome`, `sobrenome`, `dataNasc`, `telefone`, `email`, `senha`, `foto_perfil`) VALUES
 ('111.111.111-11', 'Maria', 'Silva', '2007-07-07', '18997280950', 'maria@gmail.com', '12345', NULL),
-('33333333333', 'Luzia', 'Alves', '1990-05-07', '18992222222', 'luzia@gmail.com', '1234', 0x66756e646f2e6a7067);
+('33333333333', 'Luzia', 'Alves', '1990-05-07', '18992222222', 'luzia@gmail.com', '1234', 0x66756e646f2e6a7067),
+('54847188890', 'Maria', 'asasds', '2000-09-09', '123232332', 'hj@gmail.com', '123123', 0x576861747341707020496d61676520323032342d31322d32362061742031352e35372e30362e6a706567);
 
 -- --------------------------------------------------------
 
