@@ -36,8 +36,8 @@ $funcionarios = $banco->retornarFuncionarios();
 <section class="area-clientes">
 
     <section class="titulo-clientes">
-        <h1>Ver Clientes</h1>
-        <p>Lista de todos os clientes cadastrados na loja</p>
+        <h1>Ver Funcionário</h1>
+        <p>Lista de todos os funcionários cadastrados na loja</p>
     </section>
 
     <section class="card-clientes">
@@ -45,8 +45,8 @@ $funcionarios = $banco->retornarFuncionarios();
         <section class="filtros-clientes">
             <input type="text" placeholder="Buscar por nome, email ou telefone...">
 
-            <a href="cadastro_cliente.php">
-                <button>+ Novo Cliente</button>
+            <a href="cadastro_funcionario.php">
+                <button>+ Novo funcionario</button>
             </a>
         </section>
 

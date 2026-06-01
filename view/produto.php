@@ -3,13 +3,13 @@
     <head>
         
         <meta charset="utf-8">
-        <link rel="stylesheet" href="css/produto.css">
+        <link rel="stylesheet" href="../css/produto.css">
 
     </head>
     <body>
         <header>
             <section class="cabecalho-logo">
-                <img src="img/logo.png">
+                <img src="../img/logo.png">
                 <p>Xhopii</p>
             </section>
         </header>
@@ -26,15 +26,15 @@
 
         <section class="conteudo">
             <section class="conteudo-repositorio">
-            <img src="img\produto1.png">
-            <img src="img/produto2.png">
-            <img src="img/produto3.png">
-            <img src="img\produto4.png">
-            <img src="img\produto5.png">
+            <img src="../img\produto1.png">
+            <img src="../img/produto2.png">
+            <img src="../img/produto3.png">
+            <img src="../img\produto4.png">
+            <img src="../img\produto5.png">
             </section>
  
             <section class="conteudo-produto">
-                <img src="img\produto1.png">
+                <img src="../img\produto1.png">
             </section>
 
             <section class="conteudo-detalhe">
