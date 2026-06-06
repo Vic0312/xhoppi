@@ -114,7 +114,49 @@ class Controlador{
         return $txt;
     }
 
+    public function vizuClientePorCpf($cpfEd){
+
+    $cliente = $this->bancoDeDados->buscarClientePorCpf($cpfEd);
+
+    $txt = "";
+
+    $txt .= "<input type='hidden' name='cpfOriginal' value='".$cliente['cpf']."'>";
+
+    $txt .= "<input type='text' id='nome' value='".$cliente['nome']."' name='inputNome'>";
+
+    $txt .= "<input type='text' id='sobrenome' value='".$cliente['sobrenome']."' name='inputSobrenome'>";
+
+    $txt .= "<input type='text' id='cpf' value='".$cliente['cpf']."' name='inputCPF'>";
+
+    $txt .= "<input type='date' id='data_nasc' value='".$cliente['dataNasc']."' name='inputDataNasc'>";
+
+    $txt .= "<input type='tel' id='tel' value='".$cliente['telefone']."' name='inputTelefone'>";
+
+    $txt .= "<input type='email' id='email' value='".$cliente['email']."' name='inputEmail'>";
+
+    $txt .= "<input type='password' id='senha' value='".$cliente['senha']."' name='inputSenha'>";
+
+    return $txt;
+}
+
+public function editarCliente($cpfOriginal, $cpf, $nome, $sobrenome, $dataNasc, $telefone, $email, $senha){
+
+    $this->bancoDeDados->editarCliente(
+        $cpfOriginal,
+        $cpf,
+        $nome,
+        $sobrenome,
+        $dataNasc,
+        $telefone,
+        $email,
+        $senha
+    );
+}
+
 
 }
+
+
+
 
 ?>

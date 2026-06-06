@@ -74,11 +74,15 @@ $clientes = $banco->retornarClientes();
                         <td><?php echo date("d/m/Y", strtotime($cliente['dataNasc'])); ?></td>
                         <td class="acoes">
                             <button>👁</button>
-                            <button>✎</button>
+                            <form action="edit_cliente.php" method="POST">
+                                <input type="hidden" name="cpfEdit" value="<?php echo $cliente['cpf']; ?>">
+                                <button type="submit">✎</button>
+                            </form>
                             <form action="../processamento/processamento.php" method="POST">
                                 <input type="hidden" name="cpf" value='<?php echo $cliente['cpf']; ?>'>
                                 <button type="submit" name="acao" value="deletarCliente" onclick="return confirm('Tem certeza que deseja deletar este cliente?');">🗑</button>
                             </form>
+    
                         </td>
                     </tr>
                 <?php } ?>
