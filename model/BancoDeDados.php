@@ -151,6 +151,35 @@ public function buscarClientePorCpf($cpf){
     return mysqli_fetch_assoc($resultado);
 }
 
+
+public function editarFuncionario($cpfOriginal, $cpf, $nome, $sobrenome, $dataNasc, $telefone, $cargo, $salario, $email, $senha){
+
+    $conexao = $this->conectarBD();
+
+    $consulta = "UPDATE funcionario SET
+                    cpf = '$cpf',
+                    nome = '$nome',
+                    sobrenome = '$sobrenome',
+                    dataNasc = '$dataNasc',
+                    telefone = '$telefone',
+                    cargo = '$cargo',
+                    salario = '$salario',
+                    email = '$email',
+                    senha = '$senha'
+                 WHERE cpf = '$cpfOriginal'";
+
+    mysqli_query($conexao, $consulta);
+}
+
+public function buscarFuncionarioPorCpf($cpf){
+    $conexao = $this->conectarBD();
+
+    $consulta = "SELECT * FROM funcionario WHERE cpf = '$cpf'";
+
+    $resultado = mysqli_query($conexao, $consulta);
+
+    return mysqli_fetch_assoc($resultado);
+}
 }
 
 

@@ -117,6 +117,10 @@ td{
     font-size: 14px;
 }
 
+.acoes form{
+     display: inline;
+}
+
 .acoes button{
     border: 1px solid rgb(225, 96, 61);
     background-color: white;

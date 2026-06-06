@@ -139,6 +139,51 @@ class Controlador{
     return $txt;
 }
 
+public function vizuFuncionarioPorCpf($cpfEd){
+
+    $funcionario = $this->bancoDeDados->buscarFuncionarioPorCpf($cpfEd);
+
+    $txt = "";
+
+    $txt .= "<input type='hidden' name='cpfOriginal' value='".$funcionario['cpf']."'>";
+
+    $txt .= "<input type='text' id='nome' value='".$funcionario['nome']."' name='inputNome'>";
+
+    $txt .= "<input type='text' id='sobrenome' value='".$funcionario['sobrenome']."' name='inputSobrenome'>";
+
+    $txt .= "<input type='text' id='cpf' value='".$funcionario['cpf']."' name='inputCPF'>";
+
+    $txt .= "<input type='date' id='data_nasc' value='".$funcionario['dataNasc']."' name='inputDataNasc'>";
+
+    $txt .= "<input type='tel' id='tel' value='".$funcionario['telefone']."' name='inputTelefone'>";
+
+    $txt .= "<input type='text' id='cargo' value='".$funcionario['cargo']."' name='inputCargo'>";
+
+    $txt .= "<input type='text' id='salario' value='".$funcionario['salario']."' name='inputSalario'>";
+
+    $txt .= "<input type='email' id='email' value='".$funcionario['email']."' name='inputEmail'>";
+
+    $txt .= "<input type='password' id='senha' value='".$funcionario['senha']."' name='inputSenha'>";
+
+    return $txt;
+}
+
+public function editarFuncionario($cpfOriginal, $cpf, $nome, $sobrenome, $dataNasc, $telefone, $cargo, $salario, $email, $senha){
+
+    $this->bancoDeDados->editarFuncionario(
+        $cpfOriginal,
+        $cpf,
+        $nome,
+        $sobrenome,
+        $dataNasc,
+        $telefone,
+        $cargo,
+        $salario,
+        $email,
+        $senha
+    );
+}
+
 public function editarCliente($cpfOriginal, $cpf, $nome, $sobrenome, $dataNasc, $telefone, $email, $senha){
 
     $this->bancoDeDados->editarCliente(

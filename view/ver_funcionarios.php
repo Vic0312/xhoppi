@@ -78,7 +78,10 @@ $funcionarios = $banco->retornarFuncionarios();
                         <td><?php echo date("d/m/Y", strtotime($funcionario['dataNasc'])); ?></td>
                         <td class="acoes">
                             <button>👁</button>
-                            <button>✎</button>
+                            <form action="edit_funcionario.php" method="POST">
+                                <input type="hidden" name="cpfEdit" value='<?php echo $funcionario['cpf']; ?>'>
+                                <button type="submit" name="acao" value="deletarFuncionario">✎</button>
+                            </form>
 
                             <form action="../processamento/processamento.php" method="POST">
                                 <input type="hidden" name="cpf" value='<?php echo $funcionario['cpf']; ?>'>
