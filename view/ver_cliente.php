@@ -74,7 +74,10 @@ $clientes = $banco->retornarClientes();
                         <td><?php echo date("d/m/Y", strtotime($cliente['dataNasc'])); ?></td>
                         <td class="acoes">
                             <button>👁</button>
-                            <button>✎</button>
+                            <form action="edit_cliente.php" method="POST">
+    <input type="hidden" name="cpfEdit" value="<?php echo $cliente['cpf']; ?>">
+    <button type="submit">✎</button>
+</form>
                             <button>🗑</button>
                         </td>
                     </tr>

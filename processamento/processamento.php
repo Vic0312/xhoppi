@@ -21,6 +21,33 @@ if(isset($_POST['inputEmailLog']) && isset($_POST['inputSenhaLog'])){
     die();
 }
 
+//Editar cliente
+if(isset($_POST['acao']) && $_POST['acao'] == "editarCliente"){
+
+    $cpfOriginal = $_POST['cpfOriginal'];
+    $nome = $_POST['inputNome'];
+    $sobrenome = $_POST['inputSobrenome'];
+    $cpf = $_POST['inputCPF'];
+    $dataNasc = $_POST['inputDataNasc'];
+    $telefone = $_POST['inputTelefone'];
+    $email = $_POST['inputEmail'];
+    $senha = $_POST['inputSenha'];
+
+    $controlador->editarCliente(
+        $cpfOriginal,
+        $cpf,
+        $nome,
+        $sobrenome,
+        $dataNasc,
+        $telefone,
+        $email,
+        $senha
+    );
+
+    header("Location:../view/ver_cliente.php");
+    die();
+}
+
 //Cadastro de Cliente
 if(isset($_POST['inputNome']) && isset($_POST['inputSobrenome']) && 
    isset($_POST['inputCPF']) && isset($_POST['inputDataNasc']) && 
@@ -113,6 +140,14 @@ if(!empty($_POST['inputNomeProd']) && !empty($_POST['inputFabricanteProd']) &&
     header('Location:../view/cadastro_produto.php');
     die();
 }
+
+$cpfEd = $_POST['cpfEdit'];
+
+$controlador = new Controlador();
+
+$cliente = $controlador->buscarClientePorCpf($cpfEd);
+
+include("edit_cliente.php");
 
 
 

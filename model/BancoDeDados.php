@@ -112,6 +112,34 @@ public function retornarFuncionarios(){
         return $listaProdutos;
     }
 
+    public function editarCliente($cpfOriginal, $cpf, $nome, $sobrenome, $dataNasc, $telefone, $email, $senha){
+
+    $conexao = $this->conectarBD();
+
+    $consulta = "UPDATE cliente SET
+                    cpf = '$cpf',
+                    nome = '$nome',
+                    sobrenome = '$sobrenome',
+                    dataNasc = '$dataNasc',
+                    telefone = '$telefone',
+                    email = '$email',
+                    senha = '$senha'
+                 WHERE cpf = '$cpfOriginal'";
+
+    mysqli_query($conexao, $consulta);
 }
+
+public function buscarClientePorCpf($cpf){
+    $conexao = $this->conectarBD();
+
+    $consulta = "SELECT * FROM cliente WHERE cpf = '$cpf'";
+
+    $resultado = mysqli_query($conexao, $consulta);
+
+    return mysqli_fetch_assoc($resultado);
+}
+
+}
+
 
 ?>
