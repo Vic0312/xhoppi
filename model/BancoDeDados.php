@@ -38,6 +38,18 @@ class BancoDeDados{
             return false;
         }
     }
+
+    public function deletarCliente($cpf){
+        $conexao = $this->conectarBD();
+        $consulta = "DELETE FROM cliente WHERE cpf = '$cpf'";
+        mysqli_query($conexao,$consulta);
+    }
+
+    public function deletarFuncionario($cpf){
+        $conexao = $this->conectarBD();
+        $consulta = "DELETE FROM funcionario WHERE cpf = '$cpf'";
+        mysqli_query($conexao,$consulta);
+    }
     
     public function inserirCliente($cliente){
         

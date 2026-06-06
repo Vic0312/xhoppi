@@ -75,7 +75,10 @@ $clientes = $banco->retornarClientes();
                         <td class="acoes">
                             <button>👁</button>
                             <button>✎</button>
-                            <button>🗑</button>
+                            <form action="../processamento/processamento.php" method="POST">
+                                <input type="hidden" name="cpf" value='<?php echo $cliente['cpf']; ?>'>
+                                <button type="submit" name="acao" value="deletarCliente" onclick="return confirm('Tem certeza que deseja deletar este cliente?');">🗑</button>
+                            </form>
                         </td>
                     </tr>
                 <?php } ?>

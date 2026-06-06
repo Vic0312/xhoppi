@@ -25,6 +25,17 @@ class Controlador{
         }
     }
 
+    public function deletarCliente($cpf){
+
+        $this->bancoDeDados->deletarCliente($cpf);
+
+    }
+
+    public function deletarFuncionario($cpf)
+    {
+        $this->bancoDeDados->deletarFuncionario($cpf);
+    }
+
     public function cadastrarProduto($nome, $fabricante, $descricao, $valor, $quantidade, $foto_prod){
         
         $produto = new Produto($nome,$fabricante,$descricao,$valor,$quantidade,$foto_prod);

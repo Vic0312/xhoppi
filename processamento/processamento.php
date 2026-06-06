@@ -21,6 +21,32 @@ if(isset($_POST['inputEmailLog']) && isset($_POST['inputSenhaLog'])){
     die();
 }
 
+if(isset($_POST['acao'])){
+
+    $acao = $_POST['acao'];
+
+    if($acao == "deletarCliente"){
+        $cpf = $_POST['cpf'];
+    
+        $controlador->deletarCliente($cpf);
+
+        header('Location:../view/ver_cliente.php');
+        die();
+    }
+
+    else{
+        if($acao == "deletarFuncionario"){
+            $cpf = $_POST['cpf'];
+        
+            $controlador->deletarFuncionario($cpf);
+
+            header('Location:../view/ver_funcionarios.php');
+            die();
+        }
+    }
+    
+}
+
 //Cadastro de Cliente
 if(isset($_POST['inputNome']) && isset($_POST['inputSobrenome']) && 
    isset($_POST['inputCPF']) && isset($_POST['inputDataNasc']) && 
