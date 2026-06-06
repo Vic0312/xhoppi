@@ -6,7 +6,7 @@ require_once("../controller/controlador.php");
 
 $controlador = new Controlador();
 
-//Login
+// Login
 if(isset($_POST['inputEmailLog']) && isset($_POST['inputSenhaLog'])){
     $email = $_POST['inputEmailLog'];
     $senha = $_POST['inputSenhaLog'];
@@ -21,31 +21,37 @@ if(isset($_POST['inputEmailLog']) && isset($_POST['inputSenhaLog'])){
     die();
 }
 
+// Excluir Cliente / Funcionário / Produto
 if(isset($_POST['acao'])){
 
     $acao = $_POST['acao'];
 
     if($acao == "deletarCliente"){
         $cpf = $_POST['cpf'];
-    
         $controlador->deletarCliente($cpf);
 
         header('Location:../view/ver_cliente.php');
         die();
     }
 
-    else{
-        if($acao == "deletarFuncionario"){
-            $cpf = $_POST['cpf'];
-        
-            $controlador->deletarFuncionario($cpf);
+    if($acao == "deletarFuncionario"){
+        $cpf = $_POST['cpf'];
+        $controlador->deletarFuncionario($cpf);
 
-            header('Location:../view/ver_funcionarios.php');
-            die();
-        }
+        header('Location:../view/ver_funcionarios.php');
+        die();
+    }
+
+    if($acao == "deletarProduto"){
+        $id_prod = $_POST['id_prod'];
+        $controlador->deletarProduto($id_prod);
+
+        header('Location:../view/produtos.php');
+        die();
     }
 }
-//Editar cliente
+
+// Editar Cliente
 if(isset($_POST['acao']) && $_POST['acao'] == "editarCliente"){
 
     $cpfOriginal = $_POST['cpfOriginal'];
@@ -70,10 +76,9 @@ if(isset($_POST['acao']) && $_POST['acao'] == "editarCliente"){
 
     header("Location:../view/ver_cliente.php");
     die();
-
 }
 
-//Editar funcionario
+// Editar Funcionário
 if(isset($_POST['acao']) && $_POST['acao'] == "editarFuncionario"){
 
     $cpfOriginal = $_POST['cpfOriginal'];
@@ -102,10 +107,52 @@ if(isset($_POST['acao']) && $_POST['acao'] == "editarFuncionario"){
 
     header("Location:../view/ver_funcionarios.php");
     die();
-
 }
 
-//Cadastro de Cliente
+// Editar Produto
+if(isset($_POST['acao']) && $_POST['acao'] == "editarProduto"){
+
+    $id_prod = $_POST['id_prod'];
+    $nome = $_POST['inputNomeProd'];
+    $fabricante = $_POST['inputFabricanteProd'];
+    $descricao = $_POST['inputDescricaoProd'];
+    $valor = $_POST['inputValorProd'];
+    $quantidade = $_POST['inputQtdProd'];
+    $foto_prod = $_POST['fotoAtual'];
+
+    // Se o usuário escolher uma nova imagem, substitui o caminho salvo.
+    // Se não escolher, mantém a imagem antiga.
+    if(isset($_FILES['inputFotoProd']) && $_FILES['inputFotoProd']['error'] == 0){
+
+        $pasta = "../uploads/produtos/";
+
+        if(!is_dir($pasta)){
+            mkdir($pasta, 0777, true);
+        }
+
+        $nomeArquivo = uniqid() . "_" . $_FILES['inputFotoProd']['name'];
+        $caminhoArquivo = $pasta . $nomeArquivo;
+
+        move_uploaded_file($_FILES['inputFotoProd']['tmp_name'], $caminhoArquivo);
+
+        $foto_prod = "uploads/produtos/" . $nomeArquivo;
+    }
+
+    $controlador->editarProduto(
+        $id_prod,
+        $nome,
+        $fabricante,
+        $descricao,
+        $valor,
+        $quantidade,
+        $foto_prod
+    );
+
+    header("Location:../view/produtos.php");
+    die();
+}
+
+// Cadastro de Cliente
 if(isset($_POST['inputNome']) && isset($_POST['inputSobrenome']) && 
    isset($_POST['inputCPF']) && isset($_POST['inputDataNasc']) && 
    isset($_POST['inputTelefone']) && isset($_POST['inputEmail']) &&
@@ -126,12 +173,12 @@ if(isset($_POST['inputNome']) && isset($_POST['inputSobrenome']) &&
     die();
 }
 
-//Cadastro de Funcionário
+// Cadastro de Funcionário
 if(isset($_POST['inputNomeFunc']) && isset($_POST['inputSobrenomeFunc']) && 
    isset($_POST['inputCPFFunc']) && isset($_POST['inputDataNascFunc']) && 
    isset($_POST['inputTelefoneFunc']) && isset($_POST['inputCargoFunc']) &&
    isset($_POST['inputSalarioFunc']) && isset($_POST['inputEmailFunc']) &&
-    isset($_POST['inputSenhaFunc'])){
+   isset($_POST['inputSenhaFunc'])){
 
     $nome = $_POST['inputNomeFunc'];
     $sobrenome = $_POST['inputSobrenomeFunc'];
@@ -150,7 +197,7 @@ if(isset($_POST['inputNomeFunc']) && isset($_POST['inputSobrenomeFunc']) &&
     die();
 }
 
-//Cadastro de Produto
+// Cadastro de Produto
 if(!empty($_POST['inputNomeProd']) && !empty($_POST['inputFabricanteProd']) && 
    !empty($_POST['inputDescricaoProd']) && !empty($_POST['inputValorProd']) &&
    !empty($_POST['inputQtdProd']) && isset($_FILES['inputFotoProd'])){
@@ -163,25 +210,20 @@ if(!empty($_POST['inputNomeProd']) && !empty($_POST['inputFabricanteProd']) &&
 
     $foto_prod = "";
 
-    //Upload da imagem
+    // Upload da imagem
     if($_FILES['inputFotoProd']['error'] == 0){
 
         $pasta = "../uploads/produtos/";
 
-        //Cria a pasta se não existir
         if(!is_dir($pasta)){
             mkdir($pasta, 0777, true);
         }
 
-        //Nome único para evitar conflito
         $nomeArquivo = uniqid() . "_" . $_FILES['inputFotoProd']['name'];
-
         $caminhoArquivo = $pasta . $nomeArquivo;
 
-        //Move a imagem para a pasta
         move_uploaded_file($_FILES['inputFotoProd']['tmp_name'], $caminhoArquivo);
 
-        //Caminho salvo no banco
         $foto_prod = "uploads/produtos/" . $nomeArquivo;
     }
     
@@ -197,16 +239,5 @@ if(!empty($_POST['inputNomeProd']) && !empty($_POST['inputFabricanteProd']) &&
     header('Location:../view/cadastro_produto.php');
     die();
 }
-
-$cpfEd = $_POST['cpfEdit'];
-
-$controlador = new Controlador();
-
-$cliente = $controlador->buscarClientePorCpf($cpfEd);
-
-include("edit_cliente.php");
-
-
-
 
 ?>

@@ -199,9 +199,61 @@ public function editarCliente($cpfOriginal, $cpf, $nome, $sobrenome, $dataNasc, 
 }
 
 
+public function deletarProduto($id_prod){
+    $this->bancoDeDados->deletarProduto($id_prod);
+}
+
+public function vizuProdutoPorId($id_prod){
+    $produto = $this->bancoDeDados->buscarProdutoPorId($id_prod);
+
+    $txt = "";
+
+    if(!$produto){
+        return "Produto não encontrado.";
+    }
+
+    $txt .= "<input type='hidden' name='id_prod' value='".$produto['id_prod']."'>";
+    $txt .= "<input type='hidden' name='fotoAtual' value='".$produto['foto_prod']."'>";
+
+    $txt .= "<label for='nome'>Nome do produto</label>";
+    $txt .= "<input type='text' id='nome' value='".$produto['nome']."' name='inputNomeProd'>";
+
+    $txt .= "<label for='fabricante'>Fabricante</label>";
+    $txt .= "<input type='text' id='fabricante' value='".$produto['fabricante']."' name='inputFabricanteProd'>";
+
+    $txt .= "<label for='descricao'>Descrição</label>";
+    $txt .= "<input type='text' id='descricao' value='".$produto['descricao']."' name='inputDescricaoProd'>";
+
+    $txt .= "<label for='valor'>Valor</label>";
+    $txt .= "<input type='number' step='0.01' id='valor' value='".$produto['valor']."' name='inputValorProd'>";
+
+    $txt .= "<label for='quantidade'>Quantidade</label>";
+    $txt .= "<input type='number' id='quantidade' value='".$produto['quantidade']."' name='inputQtdProd'>";
+
+    if(!empty($produto['foto_prod'])){
+        $txt .= "<p>Foto atual:</p>";
+        $txt .= "<img src='../".$produto['foto_prod']."' alt='Foto atual do produto' width='90' height='90' style='object-fit: cover; border-radius: 5px;'>";
+    }
+
+    $txt .= "<label for='foto'>Alterar imagem do produto</label>";
+    $txt .= "<input type='file' id='foto' name='inputFotoProd' accept='image/*'>";
+
+    return $txt;
+}
+
+public function editarProduto($id_prod, $nome, $fabricante, $descricao, $valor, $quantidade, $foto_prod){
+    $this->bancoDeDados->editarProduto(
+        $id_prod,
+        $nome,
+        $fabricante,
+        $descricao,
+        $valor,
+        $quantidade,
+        $foto_prod
+    );
 }
 
 
-
+}
 
 ?>

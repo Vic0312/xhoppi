@@ -50,6 +50,15 @@ class BancoDeDados{
         $consulta = "DELETE FROM funcionario WHERE cpf = '$cpf'";
         mysqli_query($conexao,$consulta);
     }
+
+    public function deletarProduto($id_prod){
+        $conexao = $this->conectarBD();
+
+        $id_prod = mysqli_real_escape_string($conexao, $id_prod);
+
+        $consulta = "DELETE FROM produto WHERE id_prod = '$id_prod'";
+        mysqli_query($conexao, $consulta);
+    }
     
     public function inserirCliente($cliente){
         
@@ -180,7 +189,41 @@ public function buscarFuncionarioPorCpf($cpf){
 
     return mysqli_fetch_assoc($resultado);
 }
+
+public function buscarProdutoPorId($id_prod){
+    $conexao = $this->conectarBD();
+
+    $id_prod = mysqli_real_escape_string($conexao, $id_prod);
+
+    $consulta = "SELECT * FROM produto WHERE id_prod = '$id_prod'";
+    $resultado = mysqli_query($conexao, $consulta);
+
+    return mysqli_fetch_assoc($resultado);
 }
 
+public function editarProduto($id_prod, $nome, $fabricante, $descricao, $valor, $quantidade, $foto_prod){
+    $conexao = $this->conectarBD();
+
+    $id_prod = mysqli_real_escape_string($conexao, $id_prod);
+    $nome = mysqli_real_escape_string($conexao, $nome);
+    $fabricante = mysqli_real_escape_string($conexao, $fabricante);
+    $descricao = mysqli_real_escape_string($conexao, $descricao);
+    $valor = mysqli_real_escape_string($conexao, $valor);
+    $quantidade = mysqli_real_escape_string($conexao, $quantidade);
+    $foto_prod = mysqli_real_escape_string($conexao, $foto_prod);
+
+    $consulta = "UPDATE produto SET
+                    nome = '$nome',
+                    fabricante = '$fabricante',
+                    descricao = '$descricao',
+                    valor = '$valor',
+                    quantidade = '$quantidade',
+                    foto_prod = '$foto_prod'
+                 WHERE id_prod = '$id_prod'";
+
+    mysqli_query($conexao, $consulta);
+}
+
+}
 
 ?>
